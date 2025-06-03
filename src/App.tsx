@@ -5,7 +5,7 @@ import DashboardLayout from './layouts/DashboardLayout';
 import Home from './pages/Home';
 import MissionTerminal from './pages/MissionTerminal';
 import StakingPage from './pages/StakingPage';
-import MarketplacePage from './pages/MarketplacePage';
+import MarketplacePage from './pages/MarketplacePage.tsx';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
