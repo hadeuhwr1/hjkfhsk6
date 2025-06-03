@@ -5,6 +5,7 @@ import DashboardLayout from './layouts/DashboardLayout';
 import Home from './pages/Home';
 import MissionTerminal from './pages/MissionTerminal';
 import StakingPage from './pages/StakingPage';
+import MarketplacePage from './pages/MarketplacePage';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="mission-terminal" element={<MissionTerminal />} />
             <Route path="stake" element={<StakingPage />} />
+            <Route path="marketplace" element={<MarketplacePage />} />
           </Route>
         </Routes>
       </Router>

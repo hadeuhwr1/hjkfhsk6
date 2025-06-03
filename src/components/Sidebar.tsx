@@ -117,7 +117,12 @@ const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = ({ isOpen, to
           <NavItem icon={<Image size={18} />} label="Stake NFT" disabled />
           <NavItem icon={<Database size={18} />} label="LP Vault" disabled />
           <NavItem icon={<Users size={18} />} label="DAO Council" disabled />
-          <NavItem icon={<ShoppingBag size={18} />} label="Marketplace" disabled />
+          <NavItem 
+            icon={<ShoppingBag size={18} />} 
+            label="Marketplace" 
+            active={location.pathname === '/marketplace'}
+            onClick={() => navigate('/marketplace')}
+          />
         </div>
 
         <div className="p-4 border-t border-purple-900/30">
