@@ -4,6 +4,7 @@ import { Toaster } from 'react-hot-toast';
 import DashboardLayout from './layouts/DashboardLayout';
 import Home from './pages/Home';
 import MissionTerminal from './pages/MissionTerminal';
+import StakingPage from './pages/StakingPage';
 import { ThemeProvider } from './context/ThemeContext';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<DashboardLayout />}>
             <Route index element={<Home />} />
             <Route path="mission-terminal" element={<MissionTerminal />} />
+            <Route path="stake" element={<StakingPage />} />
           </Route>
         </Routes>
       </Router>

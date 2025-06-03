@@ -56,7 +56,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, path, active = false, di
 const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = ({ isOpen, toggle }) => {
   const navigate = useNavigate();
   const location = useLocation();
-
+  
   return (
     <>
       {/* Mobile menu toggle */}
@@ -108,7 +108,12 @@ const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = ({ isOpen, to
             onClick={() => navigate('/mission-terminal')}
           />
           <NavItem icon={<Gift size={18} />} label="Airdrop" disabled />
-          <NavItem icon={<Wallet size={18} />} label="Stake Token" disabled />
+          <NavItem 
+            icon={<Wallet size={18} />} 
+            label="Stake Token" 
+            active={location.pathname === '/stake'}
+            onClick={() => navigate('/stake')}
+          />
           <NavItem icon={<Image size={18} />} label="Stake NFT" disabled />
           <NavItem icon={<Database size={18} />} label="LP Vault" disabled />
           <NavItem icon={<Users size={18} />} label="DAO Council" disabled />
